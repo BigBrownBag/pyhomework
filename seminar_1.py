@@ -26,24 +26,24 @@ for i in "".join(reversed(number)):
     c+=1
 print(c)
 #5.	Представить входную строку в обратном порядке.
-str = input()
-print("".join(reversed(str)))#second way - print(str[::-1])
+string = input()
+print("".join(reversed(string)))#second way - print(str[::-1])
 #6.	Проверить состоит ли входной массив исключительного из одного и того же значения.
-str=input()
-if str.count(str[1])==len(str):
+ar = input()
+if ar.count(ar[1])==len(ar):
     print('yes')
 else:
     print('no')
 #7.	Проверить сложность пароля во входной строке. Пароль должен содержать, как минимум, одну букву в нижнем регистре, одну букву в верхнем регистре, одну цифру и не содержит никаких других символов. Минимальная длина пароля 16 символов.
-str = input()
+password = input()
 c=0
-for i in range(0,len(str)):
-    if 'a'<=str[i]<='z' or 'A'<=str[i]<='Z' or '0'<=str[i]<='9':
+for i in range(0,len(password)):
+    if 'a'<=password[i]<='z' or 'A'<=password[i]<='Z' or '0'<=password[i]<='9':
         c+=1    
     else:  #если пароль содержит символы кроме букв и цифр, то цикл прерывается и пароль не считается правильным
         c=0     
         break
-if len(str)>=16	& c>=3:
+if len(password)>=16	& c>=3:
     print('yes')
 else:
     print('no')
@@ -57,8 +57,8 @@ def flatten(somelist):
 lst = [1, [2, 3], [4, [6, 7]]]
 print(list(flatten(lst)))
 #9.	На вход принимается словарь(dict), в котором ключами являются строки (str), а значениями числа (float). Необходимо вернуть ключ максимального значения.
-dict = {'l': 33, 'k': 532, 'b': 2124}
-print(max(dict, key=dict.get))
+dictionary = {'l': 33, 'k': 532, 'b': 2124}
+print(max(dictionary, key=dictionary.get))
 #10.	Дан непустой список целых чисел (X). Необходимо вернуть список, содержащий только неуникальные значения из входного списка. Порядок чисел не должен меняться.
 X = [1,2,2,4,5,11,3,1,3,3,13,33,22,23]
 n=[]
