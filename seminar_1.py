@@ -19,7 +19,12 @@ else:
     print('не удалось найти повторное вхождение символа во входной строке')
 #4.	Найти количество нулей в конце входного числа.
 number = input()
-print(number.count('0'))
+c=0
+for i in "".join(reversed(number)):
+    if i!='0':
+        break
+    c+=1
+print(c)
 #5.	Представить входную строку в обратном порядке.
 str = input()
 print("".join(reversed(str)))#second way - print(str[::-1])
